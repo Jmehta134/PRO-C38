@@ -31,7 +31,9 @@ function setup() {
   if (feed.mousePressed(function(){
     foods=foods-1;
     gameState=1;
+    var currentTime = hour();
     database.ref('/').update({
+      'hour':currentTime,
       'gameState':gameState
     });
   }))
