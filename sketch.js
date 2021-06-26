@@ -29,7 +29,7 @@ function setup() {
   feed = createButton("feed the Dog");
   feed.position(400,125);
   if (feed.mousePressed(function(){
-    if (foods > 0){foods=foods-1;}
+    if (foods > 0 && foods !== undefined){foods=foods-1;}
     gameState=1;
     var currentTime = hour();
     database.ref('/').update({
