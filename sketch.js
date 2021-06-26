@@ -36,6 +36,7 @@ function setup() {
       'hour':currentTime,
       'gameState':gameState
     });
+    writeStock(foods);
   }))
   var Bath = createButton("I want to take bath");
   Bath.position(580,125);
